@@ -95,7 +95,9 @@ public class DatabaseHelper {
 
 
         if (!TextUtils.isEmpty(tableName)) {
-            selectQuery = selectQuery.replace(tableName, quotedTableName);
+            // Fix: `select attendance_type from attendance` -> `select [attendance]_type from [attendance]` bug.
+            // https://stackoverflow.com/a/30183873/1640033
+            selectQuery = selectQuery.replaceAll("\\b" + tableName + "\\b", quotedTableName);
         }
 
         try {
@@ -390,7 +392,10 @@ public class DatabaseHelper {
 
             if (!TextUtils.isEmpty(tableName)) {
                 String quotedTableName = getQuotedTableName(tableName);
-                sql = sql.replace(tableName, quotedTableName);
+
+                // Fix: `select attendance_type from attendance` -> `select [attendance]_type from [attendance]` bug.
+                // https://stackoverflow.com/a/30183873/1640033
+                sql = sql.replaceAll("\\b" + tableName + "\\b", quotedTableName);
             }
 
             database.execSQL(sql);
