@@ -34,7 +34,7 @@ afterEvaluate {
 
                 groupId = 'com.amitshekhar.android'
                 artifactId = 'Android-Debug-Database'
-                version = '1.7'
+                version = '1.0.7'
             }
         }
     }
