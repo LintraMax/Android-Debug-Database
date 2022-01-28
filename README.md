@@ -42,20 +42,7 @@
 Add this to your app's build.gradle
 
 ```groovy
-debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
-```
-
-Using the Android Debug Database with encrypted database
-
-```groovy
-debugImplementation 'com.amitshekhar.android:debug-db-encrypt:1.0.6'
-```
-And to provide the password for the DB, you should add this in the Gradle:
-DB_PASSWORD_{VARIABLE}, if for example, PERSON is the database name: DB_PASSWORD_PERSON
-```groovy
-debug {
-    resValue("string", "DB_PASSWORD_PERSON", "password")
-}
+debugImplementation 'com.github.LintraMax:Android-Debug-Database:1.0.7'
 ```
 
 Use `debugImplementation` so that it will only compile in your debug build and not in your release build.

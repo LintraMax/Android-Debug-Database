@@ -1,6 +1,11 @@
 Change Log
 ==========
 
+Version 1.0.7 *(2022-01-28)*
+----------------------------
+* Fix: Query quoted non-table-name field bug
+
+
 Version 1.0.6 *(2019-03-07)*
 ----------------------------
 
