@@ -33,7 +33,7 @@ afterEvaluate {
                 from components.release
 
                 groupId = 'com.amitshekhar.android'
-                artifactId = 'Android-Debug-Database'
+                artifactId = 'debug-db'
                 version = '1.0.7'
             }
         }
